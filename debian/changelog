@@ -1,4 +1,4 @@
-ssh-import-id (5.7-24-g4001a38e-0ubuntu1) UNRELEASED; urgency=medium
+ssh-import-id (5.7-24-g4001a38e-0ubuntu1) cosmic; urgency=medium
 
   * New upstream snapshot.
     - debian/postinst: Correctly check old version.
