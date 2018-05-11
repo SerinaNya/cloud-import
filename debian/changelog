@@ -1,8 +1,23 @@
-ssh-import-id (5.8-0ubuntu1) UNRELEASED; urgency=medium
+ssh-import-id (5.7-24-g4001a38e-0ubuntu1) UNRELEASED; urgency=medium
 
-  * UNRELEASED
+  * New upstream snapshot.
+    - debian/postinst: Correctly check old version.
+    - debian/: Adjust packaging to include debian's changes and fix
+      lintian warnings.
+    - Migrate upstream to git.
+    - Add running of pycodestyle and pylint via tox and fix warnings.
+    - Convert tabs to spaces for indentation globally.
+    - Get path to user's authorized_keys even if HOME is not set.
+      (LP: #1570997)
+    - Exit with sys.exit() rather than os._exit.
+      [Michael Hudson-Doyle] (LP: #1770302)
+    - Launchpad: check status code of response when fetching ssh keys.
+      [Michael Hudson-Doyle] (LP: #1770305)
+    - Fix NameError on unknown service/proto. [Michael Hudson-Doyle]
+    - debian/rules: no longer run pep8 in debian build.
+    - Use setup.py's console_scripts to write ssh-import-id to /usr/bin.
 
- -- Dustin Kirkland <kirkland@ubuntu.com>  Tue, 11 Jul 2017 15:51:44 -0500
+ -- Scott Moser <smoser@ubuntu.com>  Fri, 11 May 2018 14:56:46 -0400
 
 ssh-import-id (5.7-0ubuntu1) artful; urgency=medium
 
