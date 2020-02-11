@@ -1,3 +1,13 @@
+ssh-import-id (5.8-0ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+    - Release 5.8.
+    - setup.py: Update long description content type in order to upload to
+      pypi. [Dustin Kirkland]
+    - debian/control: Update vcs fields after move to git.
+
+ -- Scott Moser <smoser@ubuntu.com>  Tue, 11 Feb 2020 11:24:22 -0500
+
 ssh-import-id (5.7-24-g4001a38e-0ubuntu1) cosmic; urgency=medium
 
   * New upstream snapshot.
