@@ -10,11 +10,11 @@ ssh-import-id (5.11-0ubuntu1) hirsute; urgency=medium
 
 ssh-import-id (5.10-0ubuntu1) focal; urgency=medium
 
-  * Upstream Release 5.10
+  * New upstream release.
     - Fix error due to local variable masking import name.
-      [Scott Moser] (LP: #1865171)
+    - Use distro instead of platform [Dave Jones] (LP: #1864107)
 
- -- Scott Moser <smoser@ubuntu.com>  Fri, 28 Feb 2020 10:44:39 -0500
+ -- Scott Moser <smoser@ubuntu.com>  Fri, 28 Feb 2020 11:03:41 -0500
 
 ssh-import-id (5.9-0ubuntu1) focal; urgency=medium
 
@@ -25,39 +25,34 @@ ssh-import-id (5.9-0ubuntu1) focal; urgency=medium
 
 ssh-import-id (5.8-0ubuntu1) focal; urgency=medium
 
-  * Upstream Release 5.8
+  * New upstream release.
+    - Release 5.8.
     - setup.py: Update long description content type in order to upload to
       pypi. [Dustin Kirkland]
     - debian/control: Update vcs fields after move to git.
+
+ -- Scott Moser <smoser@ubuntu.com>  Tue, 11 Feb 2020 11:24:22 -0500
+
+ssh-import-id (5.7-24-g4001a38e-0ubuntu1) cosmic; urgency=medium
+
+  * New upstream snapshot.
     - debian/postinst: Correctly check old version.
-    - tools: Do not use --tags with git-describe.
-    - debian/: Adjust packaging to include debian's changes.
+    - debian/: Adjust packaging to include debian's changes and fix
+      lintian warnings.
+    - Migrate upstream to git.
+    - Add running of pycodestyle and pylint via tox and fix warnings.
+    - Convert tabs to spaces for indentation globally.
     - Get path to user's authorized_keys even if HOME is not set.
       (LP: #1570997)
-    - tox: enable running of pylint.
     - Exit with sys.exit() rather than os._exit.
       [Michael Hudson-Doyle] (LP: #1770302)
     - Launchpad: check status code of response when fetching ssh keys.
       [Michael Hudson-Doyle] (LP: #1770305)
-    - github: Handle errors differently check and report status_code.
-    - main: simplify the final exception handling.
-    - Use die consistently instead of exits at some places.
     - Fix NameError on unknown service/proto. [Michael Hudson-Doyle]
-    - pylint: fix several pylint warnings.
-    - pylint: fix import order
-    - pylint: Add running of pylint and a .pylintrc.
-    - no longer run pep8 in debian build.
-    - pycodestyle fixes.
-    - Convert tabs to spaces.  Change tab indentation to 4 spaces globally.
-    - build-deb: do not require annotated tags currently.
-    - adjust setup.py to use version from import, and console_script.
-    - re-working.
-    - add tools/build-deb and changelog.trunk
-    - update debian packaging.
-    - tools/make-tarball: add script to create tarballs.
-    - opening 5.8 [Dustin Kirkland]
+    - debian/rules: no longer run pep8 in debian build.
+    - Use setup.py's console_scripts to write ssh-import-id to /usr/bin.
 
- -- Scott Moser <smoser@ubuntu.com>  Tue, 11 Feb 2020 10:31:06 -0500
+ -- Scott Moser <smoser@ubuntu.com>  Fri, 11 May 2018 14:56:46 -0400
 
 ssh-import-id (5.7-0ubuntu1) artful; urgency=medium
 
